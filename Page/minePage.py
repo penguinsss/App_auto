@@ -15,6 +15,9 @@ class MinePage(Base):
         """获取登录用户"""
         return self.find_ele(PageElements.mine_login_username_id).text
 
-    def go_to_setting(self):
+    def go_to_setting(self):  # ★ 合并的好！
+        """点击设置按钮"""
+        """上滑"""
+        self.swipe_page()
         """点击设置"""
         self.click_ele(PageElements.mine_setting_id)

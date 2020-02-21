@@ -12,8 +12,8 @@ class SettingPage(Base):
         self.click_ele(PageElements.set_logout_btn_id)
         if tag == 1:
             self.click_ele(PageElements.set_logout_ok_btn)
-            # 退出后向上滑
-            self.up_swipe()
+            # 退出后向下滑
+            self.swipe_page(2)        # ★ 合并的漂亮！
         if tag == 2:
             self.click_ele(PageElements.set_logout_dis_xpath)
 
